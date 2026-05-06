@@ -1,18 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+body {
+  overflow-x: hidden;
+}
 #navlist {
   padding-left: 15px;
   padding-right: 15px;
   width: 100%;
   list-style: none;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   /* margin-left: 15px;
   margin-right: 15px; */
   align-items: center;
 }
 nav {
   width: 100%;
-  overflow-x: none;
+  overflow-x: hidden;
+  padding-right: 2rem;
 }
 * {
   margin: 0px;
@@ -24,14 +29,14 @@ nav {
 }
 
 .container {
-  height: 100vh;
+  height: 133vh;
   width: 100vw;
-  overflow-x: none;
+  overflow-x: hidden;
   background: #ffffff;
   background: radial-gradient(
     circle,
     rgba(255, 255, 255, 1) 0%,
-    rgba(255, 179, 195, 1) 100%
+    rgba(209, 209, 209, 1) 100%
   );
 }
 
@@ -59,4 +64,102 @@ a {
 #navItems {
   display: flex;
   gap: 25px;
+  font-family: poppins;
+}
+.footerBox {
+  background: #eeaeca;
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
+  width: 100%;
+  text-align: center;
+  min-height: 20px;
+  border-top: 1.5px solid black;
+}
+.footerBox p {
+  color: #194235;
+  font-size: 1.2rem;
+}
+.contentBox {
+  width: 60%;
+  margin: auto;
+  /* border: 2px solid black; */
+  background-color: white;
+  box-shadow: 0px 0px 2px 2.5px black;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  padding: 40px;
+  box-shadow: 1.5px 1.5px 30px black;
+}
+
+.item {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.rightBox {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.09s linear 0s;
+  box-shadow: 1px 1px 10px black;
+  border-radius: 20px;
+}
+
+.rightBox img {
+  /* margin: 20px; */
+  display: block;
+  width: 30%;
+  height: 400px;
+  width: 400px;
+  border-radius: 20px;
+  /* box-shadow: 0px 0px 30px 1px black; */
+  transition: all 0.09s linear 0s;
+}
+
+.rightBox:hover {
+  transform: scale(1.05);
+}
+.leftBox {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+
+.leftBox h2 {
+  font-size: 2rem;
+}
+
+.ingBox {
+  font-size: 1.2rem;
+}
+
+.recipeBox {
+  font-size: 1.2rem;
+  margin-right: 20px;
+}
+
+.rightBox .overlay {
+  border-radius: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(36, 34, 34, 0.713);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: all 0.09s linear 0s;
+}
+.rightBox:hover .overlay {
+  opacity: 1;
+}
+.rightBox .overlay span {
+  color: white;
+  font-size: 1.2rem;
 }
